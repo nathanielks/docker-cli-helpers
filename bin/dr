@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: db <NAME>|<NAME>:<VERSION>
+
+# shellcheck disable=SC1090
+source "${BASH_SOURCE%/*}/../inc/vars.sh"
+docker run -d --name "${CONTAINER_NAME}" "${IMAGE_NAME}"

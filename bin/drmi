@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Usage: db <NAME>|<NAME>:<VERSION>
+
+# shellcheck disable=SC1090
+source "${BASH_SOURCE%/*}/../inc/vars.sh"
+IMAGE_ID="$(docker images | grep "${NAME}" | grep "${VERSION}" | awk '{print $3}')"
+docker rmi "${IMAGE_ID}"

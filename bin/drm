@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Usage: db <NAME>|<NAME>:<VERSION>
+
+# shellcheck disable=SC1090
+source "${BASH_SOURCE%/*}/../inc/vars.sh"
+CONTAINER_ID="$(docker ps | grep "${CONTAINER_NAME}" | awk '{print $1}')"
+docker rm -f "${CONTAINER_ID}"

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Usage: de <NAME>|<NAME>:<VERSION>
+
+# shellcheck disable=SC1090
+source "${BASH_SOURCE%/*}/../inc/vars.sh"
+# TODO change it so the command is configurable
+docker exec -it "${CONTAINER_NAME}" bash

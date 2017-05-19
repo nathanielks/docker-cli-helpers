@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Usage: db <NAME>|<NAME>:<VERSION>
+# An optional .dockerinfo file follows the KEY=value pattern
+# If NAME is defined in .dockerinfo, it will be used for the name of the image
+# VERSION defaults to the current git branch
+
+# shellcheck disable=SC1090
+source "${BASH_SOURCE%/*}/../inc/vars.sh"
+docker build -t "${IMAGE_NAME}" .
