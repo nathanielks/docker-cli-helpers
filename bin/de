@@ -4,4 +4,4 @@
 # shellcheck disable=SC1090
 source "${BASH_SOURCE%/*}/../inc/vars.sh"
 # TODO change it so the command is configurable
-docker exec -it "${CONTAINER_NAME}" bash
+docker exec -it "${CONTAINER_NAME}" bash -l
