@@ -3,5 +3,5 @@
 
 # shellcheck disable=SC1090
 source "${BASH_SOURCE%/*}/../inc/vars.sh"
-CONTAINER_ID="$(docker ps | grep "${CONTAINER_NAME}" | awk '{print $1}')"
+CONTAINER_ID="$(docker ps -a | grep "${CONTAINER_NAME}" | awk '{print $1}')"
 docker rm -f "${CONTAINER_ID}"
